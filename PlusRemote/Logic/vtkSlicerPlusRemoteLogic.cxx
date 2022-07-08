@@ -220,7 +220,7 @@ struct LauncherCommands
   {
     this->GetRunningServers.Command->SetTimeoutSec(0.9);
     this->GetRunningServers.Command->SetName("GetRunningServers");
-    this->GetRunningServers.Command->SetCommandContent('<Command Name="GetRunningServers" />')
+    this->GetRunningServers.Command->SetCommandContent("<Command Name='GetRunningServers' />");
     this->GetRunningServers.Command->SetBlocking(false);
     this->GetRunningServers.Callback->SetCallback(vtkSlicerPlusRemoteLogic::OnGetRunningServersCompleted);
     this->CommandReceivedCallback->SetCallback(vtkSlicerPlusRemoteLogic::OnLauncherCommandReceived);
