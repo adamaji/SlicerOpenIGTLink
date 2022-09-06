@@ -2433,7 +2433,7 @@ void vtkMRMLIGTLConnectorNode::SendCommand(igtlioCommandPointer command)
 
   if (command->IsInProgress())
   {
-    vtkErrorMacro("vtkMRMLIGTLConnectorNode::SendCommand failed: Command is already in progress!");
+    vtkErrorMacro("vtkMRMLIGTLConnectorNode::SendCommand failed: Command is already in progress!\n" << command->GetCommandContent() << "\nEnd command.");
     return;
   }
 
